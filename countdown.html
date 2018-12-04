@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="assets/css/countdown/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="assets/js/countdown/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/countdown/garden.js"></script>
+    <script type="text/javascript" src="assets/js/countdown/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br/>
+				<span class="space"><span class="comments">* 毕竟我也是学计算机的</span><br/>
+				<span class="space"><span class="comments">* 所以就写了点代码哈哈哈哈</span><br/>
+				<span class="space"><span class="comments">*/</span><br/>
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"钱非凡"</span>);<br/>
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"屠雪薇"</span>);<br/>
+				<span class="comments">// 在某一天，由于某种机缘巧合，俺遇到了您</span><br/>
+				i.met(u);<br/>
+				<span class="comments">// 然后俺就喜欢上了可爱的您（手动狗头</span><br/>
+				i.fallInLoveWith(u);<br/>
+				<span class="comments">// 我们在青春中最美好的年纪走到一起</span><br/>
+				i.togetherWith(u);<br/>
+				<span class="comments">// 其实和您一起出去玩最开心</span><br/>
+				i.chillOutWith(u);<br/>
+				i.haveFunWith(u);<br/>
+				<span class="comments">// 其实俺最喜欢看您笑了</span><br/>
+				u.smile();<br/>
+				i.giggle();<br/>
+				<span class="comments">// 每次到了重要的日子俺都不知道准备啥哈哈哈哈哈</span><br/>
+				<span class="keyword">for</span>(<span class="keyword">int</span> day = i.togetherWith(u); day <= time.time(); day++) {<br/>
+				<span class="placeholder"><span class="keyword">if</span>(day == u.importantDay()) {<br/>
+				<span class="placeholder"><span class="placeholder">i.hasNoIdeaWhatToDo();<br/>
+				<span class="placeholder">} <span class="keyword">else</span> {<br/>
+				<span class="placeholder"><span class="placeholder">i.miss(u);<br/>
+				<span class="placeholder">}<br/>
+				}<br/>
+				<span class="comments">// 我们的故事未完待续，之后的路还长要一直一起走下去鸭</span><br/>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						从我们在一起到现在已经
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						屠雪薇，我已经喜欢你好久啦<br/>
+						<div class="loveu">——钱非凡</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Inspired by <a href="https://github.com/hackerzhou/Love">hackerzhou's project</a>.<br/>
+			Copyright © 2018 <a href='http://qianfei11.github.io'>AssassinQ</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2015, 5 - 1, 23);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 2000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
