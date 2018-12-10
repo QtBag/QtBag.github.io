@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("font-awesome.min.css");
 
-/*
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html,
 body,
 div,
@@ -309,7 +303,7 @@ a:hover {
 	transform: translate3d(0, 0, 0);
 	/* Set your background with this */
 
-	background: #348cb2 url("images/bg.jpg") bottom left;
+	background: #348cb2 url("../../images/bg.jpg") bottom left;
 	background-repeat: repeat-x;
 	height: 100%;
 	left: 0;
@@ -435,7 +429,7 @@ a:hover {
 	-ms-animation: overlay 1.5s 1.5s forwards;
 	animation: overlay 1.5s 1.5s forwards;
 	background-attachment: fixed, fixed;
-	background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+	background-image: url("overlay-pattern.png"), url("overlay.svg");
 	background-position: top left, center center;
 	background-repeat: repeat, no-repeat;
 	background-size: auto, cover;
